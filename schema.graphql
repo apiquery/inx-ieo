@@ -1,0 +1,6 @@
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  newRestrictionsAddress: Bytes! # address
+  updatedBy: Bytes! # address
+}
