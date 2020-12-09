@@ -1,4 +1,6 @@
 specVersion: 0.0.2
+description: INX initial exchange offering data subgraph
+repository: https://github.com/apiquery/inx-ieo
 schema:
   file: ./schema.graphql
 dataSources:
@@ -7,6 +9,7 @@ dataSources:
     network: mainnet
     source:
       address: "0xBBC7f7A6AADAc103769C66CBC69AB720f7F9Eae3"
+      startBlock: 9411471
       abi: InxIeo
     mapping:
       kind: ethereum/events
