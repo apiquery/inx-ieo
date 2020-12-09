@@ -20,7 +20,7 @@ export class TransferCounter extends Entity {
     }
 
     static load(id: string): TransferCounter | null {
-        return store.get("TransferCounter", id) as TransferCounter | null;
+        return store.get("TransferCounter", id.toLowerCase()) as TransferCounter | null;
     }
 
     get id(): string {

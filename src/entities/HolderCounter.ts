@@ -20,7 +20,7 @@ export class HolderCounter extends Entity {
     }
 
     static load(id: string): HolderCounter | null {
-        return store.get("HolderCounter", id) as HolderCounter | null;
+        return store.get("HolderCounter", id.toLowerCase()) as HolderCounter | null;
     }
 
     get id(): string {

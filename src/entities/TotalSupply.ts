@@ -20,7 +20,7 @@ export class TotalSupply extends Entity {
     }
 
     static load(id: string): TotalSupply | null {
-        return store.get("TotalSupply", id) as TotalSupply | null;
+        return store.get("TotalSupply", id.toLowerCase()) as TotalSupply | null;
     }
 
     get id(): string {
