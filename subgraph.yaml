@@ -16,65 +16,14 @@ dataSources:
       apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
-        - RestrictionsUpdated
-        - Paused
-        - Unpaused
-        - PauserAdded
-        - PauserRemoved
-        - AccountLock
-        - AccountRelease
-        - TimelockerAdded
-        - TimelockerRemoved
-        - WhitelistUpdate
-        - WhitelisterAdded
-        - WhitelisterRemoved
-        - Revoke
-        - RevokerAdded
-        - RevokerRemoved
-        - OwnerAdded
-        - OwnerRemoved
-        - Transfer
-        - Approval
+        - Holder
+        - HolderCounter
+        - TransferCounter
+        - TotalSupply
       abis:
         - name: InxIeo
           file: ./abis/InxIeo.json
       eventHandlers:
-        - event: RestrictionsUpdated(address,address)
-          handler: handleRestrictionsUpdated
-        - event: Paused()
-          handler: handlePaused
-        - event: Unpaused()
-          handler: handleUnpaused
-        - event: PauserAdded(indexed address,indexed address)
-          handler: handlePauserAdded
-        - event: PauserRemoved(indexed address,indexed address)
-          handler: handlePauserRemoved
-        - event: AccountLock(address,uint256,uint256)
-          handler: handleAccountLock
-        - event: AccountRelease(address,uint256)
-          handler: handleAccountRelease
-        - event: TimelockerAdded(indexed address,indexed address)
-          handler: handleTimelockerAdded
-        - event: TimelockerRemoved(indexed address,indexed address)
-          handler: handleTimelockerRemoved
-        - event: WhitelistUpdate(address,bool,string)
-          handler: handleWhitelistUpdate
-        - event: WhitelisterAdded(indexed address,indexed address)
-          handler: handleWhitelisterAdded
-        - event: WhitelisterRemoved(indexed address,indexed address)
-          handler: handleWhitelisterRemoved
-        - event: Revoke(indexed address,indexed address,uint256)
-          handler: handleRevoke
-        - event: RevokerAdded(indexed address,indexed address)
-          handler: handleRevokerAdded
-        - event: RevokerRemoved(indexed address,indexed address)
-          handler: handleRevokerRemoved
-        - event: OwnerAdded(indexed address,indexed address)
-          handler: handleOwnerAdded
-        - event: OwnerRemoved(indexed address,indexed address)
-          handler: handleOwnerRemoved
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-        - event: Approval(indexed address,indexed address,uint256)
-          handler: handleApproval
       file: ./src/mapping.ts

@@ -1,6 +1,6 @@
 {
   "name": "inx-ieo",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
