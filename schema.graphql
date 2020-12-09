@@ -1,6 +1,25 @@
-type ExampleEntity @entity {
+type Holder @entity {
   id: ID!
-  count: BigInt!
-  newRestrictionsAddress: Bytes! # address
-  updatedBy: Bytes! # address
+  address: String!
+  balance: BigInt!
+  transactionCount: Int!
+  isContract: Boolean
+}
+
+type HolderCounter @entity {
+  id: ID!
+  count: Int!
+}
+
+type TransferCounter @entity {
+  id: ID!
+  count: Int!
+  totalTransferred: BigInt!
+}
+
+type TotalSupply @entity {
+  id: ID!
+  supply: BigInt!
+  distributed: BigInt!
+  burned: BigInt!
 }
